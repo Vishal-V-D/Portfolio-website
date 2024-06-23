@@ -172,7 +172,7 @@
                     </div>
                     
                     <div>              
-                        <img src="skill.png" alt="" class="skills__img">
+                        <img src="skills.jpg" alt="" class="skills__img">
                     </div>
                 </div>
             </section>
@@ -208,13 +208,12 @@
                 <h2 class="section-title">Contact</h2>
 
                  <div class="contact__container bd-grid">
-                    <form  class="contact__form">
-                 
-                        <input type="text" placeholder="Name" class="contact__input" name="name">
-                        <input type="mail" placeholder="Email" class="contact__input" name="email">
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"name="message"></textarea >
-                        <input type="button"  value="Submit" onclick="show()" class="contact__button button">
-                    </form>
+                    <form class="contact__form" onsubmit="submitForm(event)">
+    <input type="text" placeholder="Name" class="contact__input" name="name" required>
+    <input type="email" placeholder="Email" class="contact__input" name="email" required>
+    <textarea placeholder="Message" cols="0" rows="10" class="contact__input" name="message" required></textarea>
+    <input type="submit" value="Submit" class="contact__button button">
+</form>
                 </div>
             </section>
         </main>
