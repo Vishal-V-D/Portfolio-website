@@ -88,6 +88,18 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         console.error('Error sending email:', error);
     });
 });
+
+function submitForm(event) {
+    event.preventDefault();
+
+    const form = event.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const message = form.message.value;
+
+    const mailtoLink = `mailto:vishalvd006@gmail.com?subject=Contact Form Submission&body=Name: ${encodeURIComponent(name)}%0D%0AEmail: ${encodeURIComponent(email)}%0D%0AMessage: ${encodeURIComponent(message)}`;
+
+    window.location.href = mailtoLink;
 function show(){
     alert("Email sent sucessfully");
 }
